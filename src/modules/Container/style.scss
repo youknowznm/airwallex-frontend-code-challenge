@@ -1,0 +1,7 @@
+@import "~style/main";
+
+.material-container {
+  position: relative;
+  min-height: calc(100vh - 144px - 64px);
+  z-index: 99;
+}

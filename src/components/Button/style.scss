@@ -1,0 +1,151 @@
+@import "~style/main";
+
+$material-button-primary: #1976d2;
+$material-button-secondary: #dc004e;
+
+/*
+***** 常规 ****
+*/
+.material-button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 0 10px;
+  min-width: 36px;
+  height: 36px;
+  line-height: 36px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  border: 0 solid rgb(33, 33, 33);
+  color: rgb(33, 33, 33);
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+  0px 2px 2px 0px rgb(0 0 0 / 14%),
+  0px 1px 5px 0px rgb(0 0 0 / 12%);
+  background-color: rgb(224, 224, 224);
+  user-select: none;
+  overflow: hidden;
+  transition: all .4s $materialCubicBezier;
+  z-index: 90;
+  .button-content {
+    display: block;
+    @include one-line-ellipsis;
+    font-weight: 500;
+    font-size: 14px;
+    z-index: 89;
+  }
+  .ripple {
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .15);
+    border-radius: 50%;
+    cursor: pointer;
+    &.appear {
+      display: block;
+      animation: appear .8s $materialCubicBezier;
+      @keyframes appear {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    }
+    &.fade {
+      display: block;
+      animation: fade .4s $materialCubicBezier;
+      @keyframes fade {
+        to {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &:hover {
+    background-color: #d5d5d5;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%);
+  }
+
+  &.mousedown {
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+    0px 8px 10px 1px rgb(0 0 0 / 14%),
+    0px 3px 14px 2px rgb(0 0 0 / 12%);
+  }
+
+  // focus 时同时有 hover 和 mousedown
+  &:focus {
+    background-color: #d5d5d5;
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+    0px 8px 10px 1px rgb(0 0 0 / 14%),
+    0px 3px 14px 2px rgb(0 0 0 / 12%);
+  }
+
+  &.mouseup {
+    //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  }
+
+  // 小
+  &.size-small {
+    border-radius: 2px;
+    height: 30px !important;
+    line-height: 30px !important;
+    .button-content {
+      font-size: 13px !important;
+    }
+  }
+
+  // 主要、禁用、警告三种状态
+  &.type-primary {
+    background-color: $material-button-primary;
+    color: #fff;
+    &:hover {
+      background-color: rgb(17, 82, 147);
+    }
+  }
+
+  &.type-secondary {
+    background-color: $material-button-secondary;
+    color: #fff;
+    &:hover {
+      background-color: rgb(154, 0, 54);
+    }
+  }
+  &.disabled {
+    background-color: rgb(217, 217, 217) !important;
+    color: rgba(0, 0, 0, .38) !important;
+    box-shadow: none !important;
+    cursor: default !important;
+  }
+
+  /*
+  ***** 扁平 ****
+  */
+
+  &.flat {
+    box-shadow: none;
+    background-color: transparent;
+    color: rgba(#000, .87);
+    &:hover {
+      background-color: rgba(158, 158, 158, .2);
+    }
+    &.type-primary {
+      color: $material-button-primary;
+    }
+    &.type-secondary {
+      color: $material-button-secondary;
+    }
+    &.disabled {
+      background-color: transparent !important;
+      color: rgba(#000, .38) !important;
+      box-shadow: none !important;
+      cursor: default !important;
+    }
+  }
+}

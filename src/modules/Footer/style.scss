@@ -1,0 +1,36 @@
+@import "~style/main";
+
+.material-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  background: $white;
+  user-select: none;
+  padding: 46px 0;
+  height: 144px;
+  box-sizing: border-box;
+  .info {
+    position: relative;
+    line-height: 24px;
+    color: $font-secondary;
+    font-size: 12px;
+    text-align: center;
+    svg {
+      vertical-align: sub;
+      margin: 0 .5em;
+    }
+    .link {
+      cursor: pointer;
+      margin: 0 0 0 .5em;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      padding: 2px 0;
+      transition: all .3s $materialCubicBezier;
+      line-height: 24px;
+      &:hover {
+        border-bottom-color: $font-primary;
+      }
+    }
+  }
+}

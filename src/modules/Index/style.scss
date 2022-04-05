@@ -1,0 +1,24 @@
+@import "~style/main";
+
+.page-index-wrap {
+  user-select: none;
+  .content {
+    //position: absolute;
+    @include top-left-center;
+    text-align: center;
+    .main-title {
+      text-align: center;
+      text-transform: capitalize;
+    }
+    .main-subtitle {
+      color: $font-secondary;
+      margin-top: 28px;
+      text-align: center;
+      font-family: $font-family-roboto;
+    }
+    .btn-request {
+      margin-top: 28px;
+      text-transform: uppercase;
+    }
+  }
+}

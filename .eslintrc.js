@@ -11,7 +11,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
-    'comma-dangle': ['error', 'only-multiline'],
+    'comma-dangle': ['error', 'always-multiline'],
     'no-cond-assign': ['error', 'always'],
     'no-console': 'off',
     'no-trailing-spaces': ['error'],
