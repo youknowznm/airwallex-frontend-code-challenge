@@ -25,7 +25,7 @@ $material-button-secondary: #dc004e;
   background-color: rgb(224, 224, 224);
   user-select: none;
   overflow: hidden;
-  transition: all .4s $materialCubicBezier;
+  transition: all .4s $material-cubic-bezier;
   z-index: 90;
   .button-content {
     display: block;
@@ -45,7 +45,7 @@ $material-button-secondary: #dc004e;
     cursor: pointer;
     &.appear {
       display: block;
-      animation: appear .8s $materialCubicBezier;
+      animation: appear .8s $material-cubic-bezier;
       @keyframes appear {
         from {
           transform: scale(0);
@@ -57,7 +57,7 @@ $material-button-secondary: #dc004e;
     }
     &.fade {
       display: block;
-      animation: fade .4s $materialCubicBezier;
+      animation: fade .4s $material-cubic-bezier;
       @keyframes fade {
         to {
           transform: scale(1.5);

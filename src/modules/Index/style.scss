@@ -22,3 +22,14 @@
     }
   }
 }
+
+.request-form {
+  position: relative;
+  width: 360px;
+  .material-text-field {
+    width: 100%;
+  }
+  .material-button {
+    width: 100%;
+  }
+}

@@ -36,7 +36,7 @@ $input-red: rgb(221, 44, 0);
       width: 0;
       height: 2px;
       bottom: -4px;
-      transition: all .3s $materialCubicBezier;
+      transition: all .3s $material-cubic-bezier;
       background-color: $input-blue;
       z-index: 2;
     }
@@ -63,7 +63,7 @@ $input-red: rgb(221, 44, 0);
       color: $font-secondary;
       top: 5px;
       left: 3px;
-      transition: all .3s $materialCubicBezier;
+      transition: all .3s $material-cubic-bezier;
       // 如果不显式设置 transform-origin 从左侧开始，
       // 就需要针对每个元素再进行 transform: translateX() 的改变
       transform-origin: left;
@@ -75,7 +75,7 @@ $input-red: rgb(221, 44, 0);
       line-height: 14px;
       font-size: 12px;
       color: $font-secondary;
-      transition: all .3s $materialCubicBezier;
+      transition: all .3s $material-cubic-bezier;
       opacity: 1;
     }
     // 字数统计
@@ -86,7 +86,7 @@ $input-red: rgb(221, 44, 0);
       color: $font-secondary;
       bottom: -24px;
       right: 3px;
-      transition: all .3s $materialCubicBezier;
+      transition: all .3s $material-cubic-bezier;
       user-select: none;
       cursor: default;
       .separator {

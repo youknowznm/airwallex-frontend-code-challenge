@@ -1,4 +1,3 @@
-import {toast} from '~/components/Toast'
 import {setSearchParams} from './url'
 
 export function ajax(
@@ -24,16 +23,12 @@ export function ajax(
           try {
             res = JSON.parse(xhr.response)
           } catch (e) {}
-          if (res.message) {
-            toast(res.message)
-          }
           resolve(res)
         } else {
           let errorMessage = xhr.response
           try {
             errorMessage = JSON.parse(xhr.response)
           } catch (e) {}
-          toast(errorMessage)
           reject(errorMessage)
         }
       }

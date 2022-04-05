@@ -22,7 +22,25 @@ const omit = (target, keys = []) => {
   return res
 }
 
+const get = (source, path, defaultValue) => {
+  // a[0].b -> ['a', '0', 'b']
+  const paths = path
+    .replace(/\[(\d+)]/g, (all, m1) => `.${m1}`)
+    .split('.')
+    .filter(item => item !== '')
+  let result = source
+  for (let i = 0; i < paths.length; i++) {
+    // 转化 null 或 undefined 为空对象
+    result = Object(result)[paths[i]]
+    if (result === undefined) {
+      return defaultValue
+    }
+  }
+  return result
+}
+
 export {
   cloneDeep,
   omit,
+  get,
 }

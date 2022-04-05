@@ -26,7 +26,7 @@
       font-weight: 500;
       border-bottom: 1px solid transparent;
       padding: 2px 0;
-      transition: all .3s $materialCubicBezier;
+      transition: all .3s $material-cubic-bezier;
       line-height: 24px;
       &:hover {
         border-bottom-color: $font-primary;

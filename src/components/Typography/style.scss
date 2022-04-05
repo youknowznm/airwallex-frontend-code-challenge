@@ -22,7 +22,7 @@
   }
   .material-single-word {
     display: inline-block;
-    transition: opacity .4s $materialCubicBezier;
+    transition: opacity .4s $material-cubic-bezier;
     &::after {
       display: inline-block;
       content: '·';
