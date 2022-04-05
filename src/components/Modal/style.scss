@@ -105,5 +105,16 @@
       }
     }
   }
+}
 
+body.device-mobile {
+  .material-modal {
+    .modal-inner {
+      padding: 12px;
+    }
+    .icon-close {
+      top: 14px;
+      right: 12px;
+    }
+  }
 }

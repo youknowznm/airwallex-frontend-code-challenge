@@ -67,7 +67,6 @@ export default class Modal extends React.Component {
     const paddingRightInPx = `${getScrollBarWidth()}px`
     if (prevProps.isOpen === false && this.props.isOpen === true) {
       if (this.modalRef) {
-        // TODO
         // const ref = findDOMNode(this.modalRef)
         // const input = ref.querySelector('.modal-content input')
         // console.log({input})
@@ -77,7 +76,7 @@ export default class Modal extends React.Component {
       }
       addClass(body, 'has-visible-modal')
       body.style.paddingRight = paddingRightInPx
-      body.style.overflow = 'hidden'
+      // body.style.overflow = 'hidden'
       if (materialHeaderContent) {
         materialHeaderContent.style.paddingRight = paddingRightInPx
       }
@@ -85,7 +84,7 @@ export default class Modal extends React.Component {
     if (prevProps.isOpen === true && this.props.isOpen === false) {
       removeClass(body, 'has-visible-modal')
       body.style.paddingRight = '0px'
-      body.style.overflow = 'auto'
+      // body.style.overflow = 'auto'
       if (materialHeaderContent) {
         materialHeaderContent.style.paddingRight = '0px'
       }

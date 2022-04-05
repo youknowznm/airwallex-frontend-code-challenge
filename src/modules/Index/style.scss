@@ -3,18 +3,19 @@
 .page-index-wrap {
   user-select: none;
   .content {
-    //position: absolute;
     @include top-left-center;
     text-align: center;
     .main-title {
       text-align: center;
       text-transform: capitalize;
+      white-space: nowrap;
     }
     .main-subtitle {
       color: $font-secondary;
       margin-top: 28px;
       text-align: center;
       font-family: $font-family-roboto;
+      white-space: nowrap;
     }
     .btn-request {
       margin-top: 28px;
@@ -25,11 +26,21 @@
 
 .request-form {
   position: relative;
-  width: 360px;
+  width: calc(100vw - 50px);
+  max-width: 360px;
   .material-text-field {
     width: 100%;
   }
   .material-button {
     width: 100%;
+  }
+}
+
+body.device-mobile {
+  .page-index-wrap {
+    .main-subtitle,
+    .btn-request {
+      margin-top: 18px;
+    }
   }
 }

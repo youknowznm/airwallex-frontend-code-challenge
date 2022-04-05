@@ -9,17 +9,17 @@ import {post} from '~utils/http-client'
 import {get} from '~utils/simple-lodash'
 import {requestInviteApi} from '~api'
 
-export default class Index extends React.Component {
+export default class Index extends React.PureComponent {
 
   state = {
     formModalVisible: false,
     hasValidated: false,
-    fieldFullName: '',
-    fieldEmail: '',
-    fieldConfirmEmail: '',
-    // fieldFullName: '123',
-    // fieldEmail: 'usedemail@airwallex.com',
-    // fieldConfirmEmail: 'usedemail@airwallex.com',
+    // fieldFullName: '',
+    // fieldEmail: '',
+    // fieldConfirmEmail: '',
+    fieldFullName: '123',
+    fieldEmail: 'usedemail@airwallex.com',
+    fieldConfirmEmail: 'usedemail@airwallex.com',
     isSending: false,
     errorMessage: '',
     sendSuccessful: false,
@@ -132,7 +132,7 @@ export default class Index extends React.Component {
     return (
       <Modal
         confirmOnly
-        title={'Request An Invite'}
+        title={'Request an invite'}
         isOpen={this.state.formModalVisible}
         confirmButtonText={this.state.isSending ? 'Sending, please wait...' : 'Send'}
         confirmDisabled={this.state.isSending}
@@ -157,7 +157,7 @@ export default class Index extends React.Component {
             onChange={this.setFieldValue('fieldEmail')}
             invalid={this.fieldEmailInvalid}
             maxLength={30}
-            hint={'Common email address format required.'}
+            hint={'Common email format required.'}
             {...commonProps}
           />
           <TextField

@@ -55,7 +55,7 @@ export const getNodeOffsetTopToPage = node => {
 }
 
 export const checkDevice = () => {
-  let deviceType = 'pc'
+  let deviceType = 'desktop'
   if (/Android|iPhone/i.test(navigator.userAgent)) {
     deviceType = 'mobile'
   }

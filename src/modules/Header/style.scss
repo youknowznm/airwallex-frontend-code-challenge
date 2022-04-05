@@ -27,14 +27,20 @@ $duration: .4s;
       line-height: 64px;
       .page-title {
         display: inline-block;
-        max-width: 50%;
         @include one-line-ellipsis;
         font-size: 20px;
         line-height: 64px;
         height: 64px;
-        padding-left: 18px;
+        padding: 0 18px;
         transition: opacity $duration $material-cubic-bezier;
       }
+    }
+  }
+}
+
+body.device-mobile {
+  .material-header {
+    .page-title {
     }
   }
 }

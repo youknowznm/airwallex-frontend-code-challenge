@@ -1,13 +1,9 @@
-@import './mobile';
 @import './normalize';
 @import './reset';
 
 $material-cubic-bezier: cubic-bezier(0.25, 0.8, 0.25, 1);
 
-$translucent-black: rgba(#000, .3);
-$translucent-white: rgba(#fff, .5);
 $white: #fff;
-
 $red: #f44336;
 $pink: #e91e63;
 $purple: #9c27b0;
@@ -27,11 +23,6 @@ $bluegrey: #607d8b;
 $font-primary: #121212;
 $font-secondary: rgba(#000, .54);
 
-$paper-elevation-none: none;
-$paper-elevation-low: 0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
-$paper-elevation-medium: 0px 6px 6px -3px rgb(0 0 0 / 20%), 0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
-$paper-elevation-high: 0px 10px 13px -6px rgb(0 0 0 / 20%), 0px 20px 31px 3px rgb(0 0 0 / 14%), 0px 8px 38px 7px rgb(0 0 0 / 12%);
-
 $font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
 $font-family-roboto: "Roboto";
 
@@ -43,31 +34,19 @@ $material-markdown-quote: #757575;
 }
 
 html {
-  min-height: 100%;
+  min-height: 640px;
+  height: 100%;
 }
 
 body {
   position: relative;
-  height: 100%;
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fafafa;
   font-size: 16px;
   padding: 64px 0 144px;
-  //&.full-vh-content {
-  //  padding-top: 0;
-  //  .material-header,
-  //  .material-footer, {
-  //    display: none;
-  //  }
-  //  .material-container {
-  //    margin-top: 0;
-  //  }
-  //  .material-editor {
-  //    height: 100vh;
-  //  }
-  //}
+  overflow: hidden;
 }
 
 .material-responsive {
