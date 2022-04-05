@@ -1,0 +1,37 @@
+{
+  "name": "airwallex-frontend-code-challenge",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-react": "^7.16.7",
+    "@vitejs/plugin-react": "^1.0.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.12.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.49.11",
+    "vite": "^2.9.0",
+    "vite-plugin-eslint": "^1.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --cache --fix",
+      "git add"
+    ]
+  }
+}
