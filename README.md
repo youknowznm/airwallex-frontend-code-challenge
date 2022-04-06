@@ -22,9 +22,16 @@
 * clone the repo!
 * `npm i`
 
-## Preview Production
+## Test
 
 ```bash
+npm run test
+```
+
+## Preview
+
+```bash
+npm run build
 npm run preview
 ```
 
@@ -33,11 +40,3 @@ npm run preview
 ```bash
 npm run dev
 ```
-
-## Test
-
-```bash
-npm run test
-```
-
-
