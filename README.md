@@ -1,21 +1,12 @@
 # airwallex-frontend-code-challenge
-airwallex interview home test
-
-## Table of contents
-* [Noteworthy Features](#Noteworthy Features)
-* [Technologies](#technologies)
-* [Prerequisites](#prerequisites)
-* [Preview](#Preview)
-* [Develop](#develop)
-* [Test](#test)
 
 ## Noteworthy Features
 
-### Minimum usage of external libraries
-A set of material-design flavored components (inspired by [Google Design](https://web.archive.org/web/20170516175305/https://design.google.com), [AngularJS Material](https://material.angularjs.org/latest/), [Google Developer](https://developer.chrome.com/)) and some other common utils are implemented by myself. 
-
-### Some detail for user-friendliness, e.g. shortcut keys
-### Integrated ESLint and husky pre-commit lints
+1. Minimum usage of external libraries
+> A set of material-design flavored components (inspired by [Google Design](https://web.archive.org/web/20170516175305/https://design.google.com), [AngularJS Material](https://material.angularjs.org/latest/), [Google Developer](https://developer.chrome.com/)) and some other common utils are implemented by myself.
+2. Some detail for user-friendliness, e.g. shortcut keys 
+3. Integrated ESLint and husky pre-commit lints
+4. Using vite for faster dev server start and HMR
 
 ## Technologies
 * react
@@ -28,11 +19,25 @@ A set of material-design flavored components (inspired by [Google Design](https:
 
 ## Prerequisites
 * Node.js >= 12.0.0
+* clone the repo!
+* `npm i`
 
-## Preview
+## Preview Production
+
+```bash
+npm run preview
+```
 
 ## Develop
 
+```bash
+npm run dev
+```
+
 ## Test
+
+```bash
+npm run test
+```
 
 

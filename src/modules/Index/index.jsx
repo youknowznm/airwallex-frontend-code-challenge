@@ -14,12 +14,9 @@ export default class Index extends React.PureComponent {
   state = {
     formModalVisible: false,
     hasValidated: false,
-    // fieldFullName: '',
-    // fieldEmail: '',
-    // fieldConfirmEmail: '',
-    fieldFullName: '123',
-    fieldEmail: 'usedemail@airwallex.com',
-    fieldConfirmEmail: 'usedemail@airwallex.com',
+    fieldFullName: '',
+    fieldEmail: '',
+    fieldConfirmEmail: '',
     isSending: false,
     errorMessage: '',
     sendSuccessful: false,
@@ -132,6 +129,7 @@ export default class Index extends React.PureComponent {
     return (
       <Modal
         confirmOnly
+        className={'form-modal'}
         title={'Request an invite'}
         isOpen={this.state.formModalVisible}
         confirmButtonText={this.state.isSending ? 'Sending, please wait...' : 'Send'}
@@ -183,6 +181,7 @@ export default class Index extends React.PureComponent {
   renderSuccessModal = () => {
     return (
       <Modal
+        className={'success-modal'}
         confirmOnly
         title={'All done!'}
         isOpen={this.state.sendSuccessful}
@@ -234,5 +233,4 @@ export default class Index extends React.PureComponent {
       </div>
     )
   }
-
 }

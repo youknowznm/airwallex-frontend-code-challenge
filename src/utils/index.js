@@ -40,20 +40,6 @@ export const getScrollBarWidth = () => {
   return result
 }
 
-export const getNodeOffsetTopToPage = node => {
-  let res = 0
-  let curr = node
-  while (true) {
-    if (curr.offsetParent !== null) {
-      res += curr.offsetTop
-      curr = curr.offsetParent
-    } else {
-      break
-    }
-  }
-  return res
-}
-
 export const checkDevice = () => {
   let deviceType = 'desktop'
   if (/Android|iPhone/i.test(navigator.userAgent)) {
